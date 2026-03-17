@@ -33,6 +33,30 @@ Both variants support square and rectangular (tall-and-skinny) matrices.
  
 ---
 
+## Components
+
+### Core Functions
+- **`summa_stationary_a()`** - Implementation of A-stationary SUMMA algorithm.
+- **`summa_stationary_b()`** - Implementation of B-stationary SUMMA algorithm.
+- **`summa_stationary_c()`** - Implementation of C-stationary SUMMA algorithm.
+- **`matmul()`** - Local matrix multiplication (defined in an external file).
+
+### Matrix Distribution Functions
+- **`scatter_matrix_blocks()`** - Distributes matrix blocks to processes.
+- **`gather_matrix_blocks()`** - Collects result blocks from processes.
+- **`distribute_matrix_blocks()`** - Wrapper for scattering A, B matrices and initializing C.
+
+### Utility Functions
+- **`get_elapsed_time()`** - Measures elapsed time.
+- **`print_matrix()`** - Debugging function to print matrices.
+- **`generate_matrix_A()`**, **`generate_matrix_B()`** - Generate test matrices (defined in an external file).
+- **`verify_result()`** - Verifies the correctness of the result (defined in an external file).
+
+## Requirements
+- MPI for parallel execution.
+- A compatible C/C++ or Python environment.
+- External files for matrix multiplication and verification.
+
 ## Build & Run
  
 ```bash
